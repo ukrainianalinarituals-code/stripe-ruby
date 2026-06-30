@@ -1,0 +1,29 @@
+{
+  "name": "stripe-ruby",
+  "image": "mcr.microsoft.com/devcontainers/ruby:3.1",
+  "features": {
+    "ghcr.io/devcontainers/features/ruby:1": {
+      "version": "3.1"
+    },
+    "ghcr.io/devcontainers-contrib/features/just:1": {}
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "EditorConfig.editorconfig",
+        "castwide.solargraph",
+        "sorbet.sorbet-vscode-extension",
+        "LoranKloeze.ruby-rubocop-revived",
+        "SarahRidge.vscode-ruby-syntax"
+      ],
+      "settings": {
+        "window.title": "${rootName}${separator}${activeEditorMedium}",
+        "editor.formatOnSave": false,
+        "files.trimTrailingWhitespace": true,
+        "ruby.rubocop.configFilePath": ".rubocop.yml",
+        "ruby.rubocop.onSave": false
+      }
+    }
+  },
+  "postCreateCommand": "bundle install"
+}
